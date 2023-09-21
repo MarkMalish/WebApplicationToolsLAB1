@@ -1,0 +1,71 @@
+
+.w3-third{
+   
+    width: 30.33333%;
+    margin: 10px 10px 10px 10px;
+   position: relative;
+    cursor: pointer;
+ 
+}
+.w3-third:hover .w3-round {
+    transform: translate3d(-10px,-10px,0);
+  }
+  .w3-third:hover .w3-round img{
+   opacity: .7; 
+  }
+  .w3-third:hover .text{
+  opacity: 1;  
+  }
+  .w3-round{
+    background: linear-gradient(to bottom,#fff,#333);
+      width: 100%;
+    transition: transform .1s linear;
+  }
+  .w3-round img{
+  
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: opacity .1s linear;
+    
+  }
+  .text{
+    width:100%;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    position:absolute;
+    top: 50%;
+    left:0;
+    z-index: 2;
+    transform: translate3d(0, 50%,0);
+    transition: opacity .1s linear;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .mySlides {
+    display: none;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 1s ease-in-out; /* Animation duration and easing */
+}
+
+/* Add this class to make the image visible */
+.fade-in {
+    opacity: 1;
+}
+.contact-form-element {
+    opacity: 0;
+    transform: translateX(-100%); /* Start position outside the viewport */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Add this class to make the element visible */
+.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
